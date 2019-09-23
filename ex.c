@@ -1,6 +1,5 @@
 
 /* C Program to find the value of e^x using exponential function , and x is taken from the user */ 
-
 #include<stdio.h>
 #include<math.h>
  float fact(float);
@@ -17,9 +16,11 @@
       printf("\nEnter the value of x: \n");
       scanf("%d",&q);
       for(i=0;i<=p;i++)
-             p = 
-             s = s + (float) {pow(q,i)/fact(i)};
-       printf("The value of e^%d using exp. function up to %d terms is: %f ",q,p,s);
+           {
+            s = s + (float) {pow(q,i)/fact(i)};
+            };
+       printf("The value of e^%d using exp. function up to %d terms is: %0.11f ",q,p,s);
+
     }//end of main 
     float fact(float a)
       {
