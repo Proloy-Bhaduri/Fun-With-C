@@ -17,7 +17,7 @@
       scanf("%d",&q);
       for(i=0;i<=p;i++)
            {
-            s = s + (float) {pow(q,i)/fact(i)};// Write an unique line instead of these 
+            s = s + (float) {pow(q,i)/fact(i)};// Write an unique line instead of this
             };
        printf("The value of e^%d using exp. function up to %d terms is: %0.11f ",q,p,s);
 
