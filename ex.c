@@ -24,9 +24,7 @@
   		{
   			int j,fact=1;
   			for(j=1;j<=a;j++)
-  			{
   				fact = fact * j;
-  			}
   			if(a==0)
   				return 1;
   			else
