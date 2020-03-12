@@ -24,7 +24,7 @@ void main()
              sq_neon = sq_neon/10;
          }
         for(int j = 0 ;j<i;j++)
-             s = s + sq_rem[j];
+             s+=sq_rem[j];
         if(s==neonn)
             return true;
         else
