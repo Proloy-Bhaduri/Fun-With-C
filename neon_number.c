@@ -11,7 +11,6 @@ void main()
               {
                 printf("%d ",k);
               }
-              else continue;
           }
      }
     bool is_neon(int neonn)
