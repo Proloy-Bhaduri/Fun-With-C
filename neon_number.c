@@ -31,12 +31,9 @@ void main()
         int power(int b, int ex)
             {
                 if(ex==0) return 1;
-                else
-                    return b * power(b,ex-1);
+                else  return b * power(b,ex-1);
             } // power() ends
-
 /* Didn't use pow() because it gave 5^2 = 24, 10^2 = 99*/
 /* Output:
 Neon numbers are only 3 :
-0 1 9
-*/
+0 1 9*/
