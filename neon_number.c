@@ -7,7 +7,7 @@ void main()
      printf("Neon numbers are only 3 : \n");
      for(int k = 0;k <1000000;k++)
           {
-              if(is_neon(k)==true)
+              if(is_neon(k))
               {
                 printf("%d ",k);
               }
