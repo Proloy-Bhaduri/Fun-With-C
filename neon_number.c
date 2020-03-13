@@ -8,9 +8,7 @@ void main()
      for(int k = 0;k <1000000;k++)
           {
               if(is_neon(k))
-              {
-                printf("%d ",k);
-              }
+                   printf("%d ",k);
           }
      }
     bool is_neon(int neonn)
