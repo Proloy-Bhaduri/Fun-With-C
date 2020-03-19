@@ -17,6 +17,6 @@ int main(void)
     if(flag == 0)
         printf("\nPrime");
     else
-        printf("\n Not Prime");
+        printf("\n %d Not Prime as it is divisible by %d",num,i);
     return 0;
 }
