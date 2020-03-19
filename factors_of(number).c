@@ -1,5 +1,5 @@
 #include<stdio.h>
-int factors_of(int);
+void factors_of(int);
 int main(void)
 {
     int num;
@@ -9,7 +9,7 @@ int main(void)
     factors_of(num);
     return 0;
 }
-int factors_of(int a)
+void factors_of(int a)
      {
        int i=1;
        for(; i<=a;i++)
