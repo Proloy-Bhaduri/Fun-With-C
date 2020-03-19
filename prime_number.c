@@ -2,7 +2,8 @@
 #include  <stdio.h>
 int main(void)
 {
-    int num,i=2,flag=0;
+    int i=2,flag=0;
+    long num;
     printf("Enter a number \n");
     scanf("%d",&num);
    for(; i<num;i++)
@@ -17,6 +18,6 @@ int main(void)
     if(flag == 0)
         printf("\nPrime");
     else
-        printf("\n %d Not Prime as it is divisible by %d",num,i);
+        printf("\n %ld Not Prime as it is divisible by %d",num,i);
     return 0;
 }
