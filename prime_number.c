@@ -1,7 +1,5 @@
 //gcc 5.4.0
-
 #include  <stdio.h>
-
 int main(void)
 {
     int num,i=2,flag=0;
