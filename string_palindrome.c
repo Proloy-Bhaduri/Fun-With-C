@@ -9,7 +9,7 @@ int main()
         mid = len/2;
         while(i<mid)
         {
-            if(str[i] != str[len-1-i]) {f=1;break;}
+            if(str[i] != str[len-i-1]) {f=1;break;}
             i++;
         }
         if(f!=0) printf("\nEntered string is Not Palindrome\n");
