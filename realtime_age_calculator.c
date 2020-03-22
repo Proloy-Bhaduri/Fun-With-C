@@ -14,31 +14,33 @@ int main()
         CR_D = local ->tm_mday;
         CR_M =local->tm_mon + 1;
         CR_Y = local ->tm_year + 1900;
+        system("color b0");
         printf("Today: %02d/%02d/%02d\n ",CR_D,CR_M,CR_Y);
         printf("Enter your DOB \n Date <enter> Month <enter> Year<enter>:\n ");
         scanf("%d%d%d",&DD,&MM,&YY);
-        if(CR_D>=DD && CR_M > MM && CR_Y>YY)
+        if(DD>31 || MM >12) {printf("Day should be between 1-31 \nMonth should be between 1-12\nYear should be less than %d",CR_Y);exit(0);}
+        if(CR_D>=DD && CR_M >=MM && CR_Y>YY)
         {
             age_d = CR_D-DD;
             age_m = CR_M - MM;
             age_y = CR_Y - YY;
         }
-        else if (CR_D>=DD && CR_M < MM & CR_Y>YY)
+        else if (CR_D>DD && CR_M <MM && CR_Y>YY)
         {
             age_d = CR_D - DD;
             age_m = 12+(CR_M - MM);
             age_y = (CR_Y - YY) - 1;
         }
-        else if (CR_D<=DD && CR_M > MM & CR_Y>YY)
+        else if (CR_D<=DD && CR_M > MM && CR_Y>YY)
         {
             age_d = days_of(MM,YY)- abs(DD - CR_D);
-            age_m = (CR_M - MM)-abs(DD - CR_D);
+            age_m = (CR_M - MM)-1;//- abs(DD - CR_D) ;
             age_y = (CR_Y - YY);
         }
-        else if (CR_D<=DD && CR_M < MM & CR_Y>YY)
+        else if (CR_D<=DD && CR_M < MM && CR_Y>YY)
         {
             age_d = days_of(MM,YY)- abs(DD - CR_D);
-            age_m = 12 - (MM - CR_M)- 1 ;
+            age_m = 12-(MM - CR_M)- 1 ;
             age_y = (CR_Y - YY) - 1;
         }
         else if(DD>CR_D && MM == CR_M)
@@ -49,10 +51,9 @@ int main()
         }
         else
         {
-            printf("Invalid Input\n"); exit(0);
+           printf("Invalid Input\n"); exit(0);
         }
-         printf("\nYour age is: %02d Years %02d Months %02d Days\n",age_y,age_m,age_d);
-        return 0 ;
+        printf("\nYour age is: %02d Years %02d Months %02d Days\n",age_y,age_m,age_d);
     }
     int days_of(int m,int y)
         {
@@ -64,11 +65,11 @@ int main()
                    case 9: return 30;break;
                    case 11: return 30;break;
                    default: return 31;break;
-               }
+                }
         }
   bool is_leapyear(int yy)
      {
-       if( yy%4 ==0 && yy %100 != 0 || yy%400==0)
+       if( yy%4==0 && yy %100==0 || yy%400==0)
          return true;
        else return false;
      }
