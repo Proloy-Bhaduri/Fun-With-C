@@ -43,7 +43,7 @@ int main()
         }
         else if(DD>CR_D && MM == CR_M)
         {
-            age_d = 31 - ( DD - CR_D );
+            age_d = days_of(MM,YY) - ( DD - CR_D );
             age_m = 11;
             age_y = CR_Y - YY-1;
         }
