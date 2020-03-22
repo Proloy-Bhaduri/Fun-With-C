@@ -41,6 +41,12 @@ int main()
             age_m = 12 - (MM - CR_M)- 1 ;
             age_y = (CR_Y - YY) - 1;
         }
+        else if(DD>CR_D && MM == CR_M)
+        {
+            age_d = 31 - ( DD - CR_D );
+            age_m = 11;
+            age_y = CR_Y - YY-1;
+        }
         else
         {
             printf("Invalid Input\n"); exit(0);
