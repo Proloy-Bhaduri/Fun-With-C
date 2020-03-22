@@ -17,25 +17,25 @@ int main()
         printf("Today: %02d/%02d/%02d\n ",CR_D,CR_M,CR_Y);
         printf("Enter your DOB \n Date <enter> Month <enter> Year<enter>:\n ");
         scanf("%d%d%d",&DD,&MM,&YY);
-        if(CR_D>=DD && CR_M >= MM && CR_Y>YY)
+        if(CR_D>=DD && CR_M > MM && CR_Y>YY)
         {
             age_d = CR_D-DD;
             age_m = CR_M - MM;
             age_y = CR_Y - YY;
         }
-        else if (CR_D>DD && CR_M <= MM & CR_Y>YY)
+        else if (CR_D>=DD && CR_M < MM & CR_Y>YY)
         {
             age_d = CR_D - DD;
             age_m = 12+(CR_M - MM);
             age_y = (CR_Y - YY) - 1;
         }
-        else if (CR_D<DD && CR_M >= MM & CR_Y>YY)
+        else if (CR_D<=DD && CR_M > MM & CR_Y>YY)
         {
             age_d = days_of(MM,YY)- abs(DD - CR_D);
             age_m = (CR_M - MM)-abs(DD - CR_D);
             age_y = (CR_Y - YY);
         }
-        else if (CR_D<=DD && CR_M <= MM & CR_Y>YY)
+        else if (CR_D<=DD && CR_M < MM & CR_Y>YY)
         {
             age_d = days_of(MM,YY)- abs(DD - CR_D);
             age_m = 12 - (MM - CR_M)- 1 ;
