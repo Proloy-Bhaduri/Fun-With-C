@@ -96,7 +96,7 @@ int main()
                      strcat(money,h);
                  }
 
-                  else if(k == 3 and d_place!=0 and d1_place>0)
+                  else if(k == 3 and d_place!=0 and d1_place>1)
                  {
                      strcpy(h,"");
                      strcat(h,t10s_set2[d1_place-1]);
@@ -132,8 +132,18 @@ int main()
                      strcpy(money,"");
                      strcat(money,h);
                  }
-
-                 else if(k == 5 and d_place!=0 and d1_place>0)
+                 else if(k == 3 and d_place>0 and d1_place==1)
+                 {
+                     strcpy(h,"");
+                     strcat(h,teens_set2[d_place-1]);
+                     strcat(h," ");
+                     strcat(h,word_set1[k-1]);
+                     strcat(h," ");
+                     strcat(h,money);
+                     strcpy(money,"");
+                     strcat(money,h);
+                 }
+                 else if(k == 5 and d_place!=0 and d1_place>1)
                  {
                      strcpy(h,"");
                      strcat(h,t10s_set2[d1_place-1]);
@@ -157,6 +167,18 @@ int main()
                      strcpy(money,"");
                      strcat(money,h);
                  }
+                 else if(k == 5 and d_place>0 and d1_place==1)
+                 {
+                     strcpy(h,"");
+                     strcat(h,teens_set2[d_place-1]);
+                     strcat(h," ");
+                     strcat(h," ");
+                     strcat(h,word_set1[k-2]);
+                     strcat(h," ");
+                     strcat(h,money);
+                     strcpy(money,"");
+                     strcat(money,h);
+                 }
                  else if(k == 5 and d_place==0 and d1_place>0)
                  {
                      strcpy(h,"");
@@ -169,7 +191,7 @@ int main()
                      strcpy(money,"");
                      strcat(money,h);
                  }
-                  else if(k == 7 and d_place!=0 and d1_place>0)
+                  else if(k == 7 and d_place!=0 and d1_place>1)
                  {
                      strcpy(h," ");
                      strcat(h,t10s_set2[d1_place-1]);
@@ -186,6 +208,17 @@ int main()
                  {
                      strcpy(h," ");
                      strcat(h,digits_set[d_place-1]);
+                     strcat(h," ");
+                     strcat(h,word_set1[4]);
+                     strcat(h," ");
+                     strcat(h,money);
+                     strcpy(money,"");
+                     strcat(money,h);
+                 }
+                 else if(k == 7 and d_place>0 and d1_place==1)
+                 {
+                     strcpy(h," ");
+                     strcat(h,teens_set2[d_place-1]);
                      strcat(h," ");
                      strcat(h,word_set1[4]);
                      strcat(h," ");
